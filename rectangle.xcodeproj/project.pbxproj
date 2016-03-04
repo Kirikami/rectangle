@@ -8,23 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8B0155051C8166C400A3849A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0155041C8166C400A3849A /* main.cpp */; };
+		8B01550C1C81A49800A3849A /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B01550B1C81A49800A3849A /* SDL2.framework */; };
+		8B01550E1C81A4A500A3849A /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B01550D1C81A4A500A3849A /* SDL2_image.framework */; };
+		8B4517AD1C8555AF00C9E63B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4517AC1C8555AF00C9E63B /* OpenGL.framework */; };
+		8B4517B01C85566400C9E63B /* cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B4517AE1C85566400C9E63B /* cube.cpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8B0154FF1C8166C400A3849A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8B0155011C8166C400A3849A /* rectangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rectangle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0155041C8166C400A3849A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8B01550B1C81A49800A3849A /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		8B01550D1C81A4A500A3849A /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		8B4517AC1C8555AF00C9E63B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		8B4517AE1C85566400C9E63B /* cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cube.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +28,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4517AD1C8555AF00C9E63B /* OpenGL.framework in Frameworks */,
+				8B01550E1C81A4A500A3849A /* SDL2_image.framework in Frameworks */,
+				8B01550C1C81A49800A3849A /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +40,9 @@
 		8B0154F81C8166C400A3849A = {
 			isa = PBXGroup;
 			children = (
+				8B4517AC1C8555AF00C9E63B /* OpenGL.framework */,
+				8B01550D1C81A4A500A3849A /* SDL2_image.framework */,
+				8B01550B1C81A49800A3849A /* SDL2.framework */,
 				8B0155031C8166C400A3849A /* rectangle */,
 				8B0155021C8166C400A3849A /* Products */,
 			);
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0155041C8166C400A3849A /* main.cpp */,
+				8B4517AE1C85566400C9E63B /* cube.cpp */,
 			);
 			path = rectangle;
 			sourceTree = "<group>";
@@ -71,7 +74,6 @@
 			buildPhases = (
 				8B0154FD1C8166C400A3849A /* Sources */,
 				8B0154FE1C8166C400A3849A /* Frameworks */,
-				8B0154FF1C8166C400A3849A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -118,6 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4517B01C85566400C9E63B /* cube.cpp in Sources */,
 				8B0155051C8166C400A3849A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +210,10 @@
 		8B0155091C8166C400A3849A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +221,10 @@
 		8B01550A1C8166C400A3849A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -237,6 +248,7 @@
 				8B01550A1C8166C400A3849A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
